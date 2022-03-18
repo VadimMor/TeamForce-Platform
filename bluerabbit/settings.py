@@ -108,3 +108,7 @@ MEDIA_URL = '/media/'
 MEDIA_DIR = os.path.abspath(BASE_DIR + MEDIA_URL)
 
 DOMAIN = '127.0.0.1:8000'
+
+EMAIL = "zebrach77@gmail.com"
+LANG = "English"
+REDIRECT_URL = ""

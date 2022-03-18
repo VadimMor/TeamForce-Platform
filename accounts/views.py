@@ -14,6 +14,7 @@ from django.urls import reverse
 from .models import CustomUser
 from random import randint
 from . import forms
+from .auth import auth_id, is_auth
 
 
 def generate_code():
@@ -165,3 +166,7 @@ def password_reset_request(request):
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse('login'))
+
+def authen(request):
+    idd = auth_id()
+    return HttpResponse(idd+'\n\n'+is_auth(idd))
